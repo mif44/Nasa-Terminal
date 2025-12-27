@@ -1,18 +1,12 @@
 import requests
-import webbrowser
-import os
 
 
-from dotenv import load_dotenv
+from config import API_KEY
 
 
-load_dotenv()
-api_key = os.getenv("NASA_API_KEY", "DEMO_KEY")
-
-
-def producing_solar_flare(start_date: str):
+def producing_solar_flare(start_date: str) -> str:
     url = "https://api.nasa.gov/DONKI/FLR"
-    params ={"api_key": api_key,
+    params ={"api_key": API_KEY,
              "startDate": start_date.strip()}
 
     try:

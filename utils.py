@@ -20,7 +20,7 @@ def text_output():
     type_effect(art_str, delay=0.002)
 
 
-def type_effect(text, delay=0.001):
+def type_effect(text, delay=0.001) -> str:
     for char in text:
         print(char, end="", flush=True)
         time.sleep(delay)

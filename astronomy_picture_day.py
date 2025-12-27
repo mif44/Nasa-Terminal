@@ -1,18 +1,13 @@
 import requests
 import webbrowser
-import os
 
 
-from dotenv import load_dotenv
+from config import API_KEY
 
 
-load_dotenv()
-api_key = os.getenv("NASA_API_KEY", "DEMO_KEY")
- 
-
-def image_acquisition(selected_date: str):
+def image_acquisition(selected_date: str) -> str:
     url = "https://api.nasa.gov/planetary/apod"
-    params = {"api_key": api_key,
+    params = {"api_key": API_KEY,
              "date": selected_date.strip()}
     
     try:

@@ -1,18 +1,13 @@
 import requests
 import webbrowser
-import os
 
 
-from dotenv import load_dotenv
-
-
-load_dotenv()
-api_key = os.getenv("NASA_API_KEY", "DEMO_KEY")
+from config import API_KEY
     
 
-def asteroid_data_acquisition(start_date: str):
+def asteroid_data_acquisition(start_date: str) -> str:
     url = "https://api.nasa.gov/neo/rest/v1/feed"
-    params = {"api_key": api_key,
+    params = {"api_key": API_KEY,
              "start_date": start_date.strip()}
     
     try:

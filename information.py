@@ -2,7 +2,7 @@ import time
 from utils import terminal_clean
 
 
-text = """
+TEXT_INFO = """
 ---------------------------------------------------------------------------------------------------
 1. APOD, or Astronomy Picture of the Day, is a popular NASA website that features a different stunning image or photograph of the universe daily, accompanied by a brief, expert explanation written by professional astronomers, serving as a fantastic educational resource for all ages and showcasing the wonders of space.
 ---------------------------------------------------------------------------------------------------

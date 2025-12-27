@@ -4,7 +4,7 @@ import questionary
 from datetime import datetime
 
 
-def get_data() -> tuple[str]:
+def get_start_data() -> tuple[str]:
     while True:
 
         choice = questionary.text("Enter the start date format YYYY-MM-DD:").ask()
